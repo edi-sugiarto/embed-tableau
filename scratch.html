@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Button</title>
+</head>
+<body>
+
+<!-- Button to trigger the preformatted email -->
+<button onclick="createPreformattedEmail()">Create Email</button>
+
+<script>
+    function createPreformattedEmail() {
+        // Create the email body with preformatted text
+        var emailBody = "Dear Edi,\n\n";
+        emailBody += "I trust this message finds you well. \n\n";
+        emailBody += "I have read your portfolio through your website and I am keen to gain deeper understanding of your expertise. ";
+        emailBody += "With this in mind, I would be greatly appreciative if you kindly share your most recent Curriculum Vitae (CV) at your earliest convenience.\n\n";
+        emailBody += "Thank you for considering this request. I eagerly anticipate the opportunity to delve further with your reply.\n\n";
+        emailBody += "Best regards,\n";
+
+        // Create a mailto link with the preformatted email body
+        var mailtoLink = "mailto:edi.sugi1996@gmail.com?subject=CV Request&body=" + encodeURIComponent(emailBody);
+
+        // Open the email client with the preformatted email
+        window.location.href = mailtoLink;
+    }
+</script>
+
+</body>
+</html>
